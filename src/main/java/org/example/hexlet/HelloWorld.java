@@ -10,6 +10,10 @@ public class HelloWorld {
 
         app.get("/users", ctx -> ctx.result("GET /users"));
         app.post("/users", ctx -> ctx.result("POST /users"));
+        app.get("/hello", ctx -> {
+            String name = ctx.queryParamAsClass("name", String.class).getOrDefault("World");
+            ctx.result("Hello, " + name + "!");
+        });
         app.start(7070);
     }
 }
