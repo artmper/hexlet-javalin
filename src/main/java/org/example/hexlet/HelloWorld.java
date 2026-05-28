@@ -7,8 +7,6 @@ import org.example.hexlet.dto.courses.CoursesPage;
 import io.javalin.Javalin;
 import io.javalin.rendering.template.JavalinJte;
 
-import java.util.Objects;
-
 import static io.javalin.rendering.template.TemplateUtil.model;
 
 public class HelloWorld {
@@ -38,7 +36,7 @@ public class HelloWorld {
         app.get("/courses/{id}", ctx -> {
             var id = ctx.pathParamAsClass("id", Long.class).get();
             var course = Data.getCourses().stream()
-                    .filter(c -> Objects.equals(c.getId(), id))
+                    .filter(c -> c.getId() == id)
                     .findFirst()
                     .orElseThrow(() -> new NotFoundResponse("Course not found"));
             var page = new CoursePage(course);
