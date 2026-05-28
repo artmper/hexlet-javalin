@@ -47,7 +47,7 @@ public class HelloWorld {
 
         app.get("/courses", ctx -> {
             var courses = Data.getCourses();
-            var header = "Курсы по программированию";
+            var header = "Programming languages courses";
             var page = new CoursesPage(courses, header);
 
             ctx.render("courses/index.jte", model("page", page));
