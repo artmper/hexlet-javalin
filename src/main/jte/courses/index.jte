@@ -1,12 +1,11 @@
 @import org.example.hexlet.dto.courses.CoursesPage
-@import org.example.hexlet.dto.courses.CoursePage
 
-@param CoursePage coursePage
 @param CoursesPage page
 
 @template.layout.page(
-    page = coursePage,
-    content = @`<h1>${page.getHeader()}</h1>
+    title = page.getHeader(),
+    description = null,
+    content = @`
         @if(page.getCourses().isEmpty())
         <p>Пока не добавлено ни одного курса</p>
         @else
@@ -18,7 +17,7 @@
         @endfor
         @endif
     `,
-    footer = @`<p>My GitHub: https://github.com/artmper</p>
+    footer = @`<p>My GitHub: <a href="https://github.com/artmper">https://github.com/artmper</a></p>
     `
 )
 

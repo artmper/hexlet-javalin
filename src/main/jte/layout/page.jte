@@ -1,7 +1,8 @@
 @import gg.jte.Content
 @import org.example.hexlet.dto.courses.CoursePage
 
-@param CoursePage page
+@param String title
+@param String description
 @param Content content
 @param Content footer
 
@@ -9,19 +10,19 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        @if(page.getCourse().getDescription() != null)
-            <meta name="description" content="${page.getCourse().getDescription()}">
+        @if(description != null)
+            <meta name="description" content="${description}">
         @endif
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>${page.getCourse().getName()}</title>
+        <title>${title}</title>
     </head>
     <body>
-        <h1>${page.getCourse().getName()}</h1>
+        <h1>${title}</h1>
         <div class="content">
             ${content}
         </div>
         @if (footer != null)
-            <div class="footer">
+            <div class="footer" style="margin-top: 30px; border-top: 2px solid #ccc; padding-top: 15px; text-align: center;">
                 ${footer}
             </div>
         @endif
