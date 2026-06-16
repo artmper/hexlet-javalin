@@ -1,17 +1,14 @@
 @import org.example.hexlet.dto.courses.CoursePage
-@param CoursePage page
 
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>${page.getCourse().getName()}</title>
-    </head>
-    <body>
-        <main>
-            <h1>${page.getCourse().getName()}</h1>
-            <p>${page.getCourse().getDescription()}</p>
-        </main>
-    </body>
-</html>
+@param CoursePage coursePage
+
+@template.layout.page(
+    page = coursePage,
+    content = @`
+        <h1>${coursePage.getCourse().getName()}</h1>
+        <p>${coursePage.getCourse().getDescription()}</p>
+    `,
+    footer = @`<p>My GitHub: https://github.com/artmper</p>
+    `
+)
+
