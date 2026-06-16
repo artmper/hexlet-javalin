@@ -7,7 +7,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class Course {
+public final class Course {
     private long id;
 
     @ToString.Include
