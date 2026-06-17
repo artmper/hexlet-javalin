@@ -29,3 +29,4 @@ out/
 
 # Локальные настройки
 local.properties
+/jte-classes/
