@@ -18,6 +18,7 @@ repositories {
 }
 
 dependencies {
+    implementation("org.apache.commons:commons-lang3:3.17.0")
     implementation("io.javalin:javalin:6.1.3")
     implementation("org.slf4j:slf4j-simple:2.0.7")
     implementation("io.javalin:javalin-rendering:6.1.3")

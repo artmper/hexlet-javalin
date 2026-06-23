@@ -1,13 +1,17 @@
 package org.example.hexlet;
 
-import io.javalin.http.NotFoundResponse;
+import org.apache.commons.lang3.StringUtils;
+
 import org.example.hexlet.dto.courses.CoursePage;
 import org.example.hexlet.dto.courses.CoursesPage;
+import org.example.hexlet.model.Course;
 
 import io.javalin.Javalin;
+import io.javalin.http.NotFoundResponse;
 import io.javalin.rendering.template.JavalinJte;
-
 import static io.javalin.rendering.template.TemplateUtil.model;
+
+import java.util.List;
 
 public class HelloWorld {
     public static void main(String[] args) {
@@ -44,10 +48,20 @@ public class HelloWorld {
         });
 
         app.get("/courses", ctx -> {
-            var courses = Data.getCourses();
+            List<Course> courses;
             var header = "Programming languages courses";
-            var page = new CoursesPage(courses, header);
+            var term = ctx.queryParam("term");
 
+            if (term != null) {
+                courses = Data.getCourses().stream()
+                        .filter(c -> StringUtils.containsIgnoreCase(c.getName(), term) ||
+                                StringUtils.containsIgnoreCase(c.getDescription(), term))
+                        .toList();
+            } else {
+                courses = Data.getCourses();
+            }
+
+            var page = new CoursesPage(courses, header, term);
             ctx.render("courses/index.jte", model("page", page));
         });
 

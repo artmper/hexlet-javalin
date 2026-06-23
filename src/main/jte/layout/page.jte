@@ -1,5 +1,4 @@
 @import gg.jte.Content
-@import org.example.hexlet.dto.courses.CoursePage
 
 @param String title
 @param String description
