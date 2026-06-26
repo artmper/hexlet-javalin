@@ -11,10 +11,10 @@ import java.util.stream.Collectors;
 import java.util.Collections;
 
 public class Data {
-    private static final int ITEMS_COUNT = 10;
+    private static final int ITEMS_COUNT = 12;
 
     public static List<Course> getCourses() {
-        Random random = new Random(123);
+        Random random = new Random(124);
         Faker faker = new Faker(random);
 
         List<String> ids = IntStream
