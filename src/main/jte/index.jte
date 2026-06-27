@@ -9,9 +9,10 @@
 <div class="col-lg-8 mx-auto p-4 py-md-5">
     <main>
         <h1 class="text-body-emphasis">Привет, Хекслет!</h1>
-        <p>
-            <a href="/courses">Courses</a>
-        </p>
+        <ul>
+            <li><a href="/courses">Courses</a></li>
+            <li><a href="/users">Users</a></li>
+        </ul>
     </main>
 </div>
 </body>

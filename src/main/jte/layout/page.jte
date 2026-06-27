@@ -16,6 +16,7 @@
         <title>${title}</title>
     </head>
     <body>
+        <p><a href="/">На Главную</a></p>
         <h1>${title}</h1>
         <div class="content">
             ${content}

@@ -10,6 +10,14 @@ content = @`
         <input type="search" name="term" value="${page.getTerm()}" />
         <input type="submit" value="Search" />
     </form>
+    <a href="/users/build">
+        <label>
+            Для создания нового пользователя,
+            нажмите кнопку
+            <input type="submit" value="Создать">
+        </label>
+    </a>
+
     @if(page.getUsers().isEmpty())
         <p>Пока не добавлено ни одного user</p>
     @else

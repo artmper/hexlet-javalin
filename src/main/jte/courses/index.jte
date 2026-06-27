@@ -10,6 +10,14 @@
             <input type="search" name="term" value="${page.getTerm()}" />
             <input type="submit" value="Search" />
         </form>
+        <a href="/courses/build">
+            <label>
+                Для создания нового курса,
+                нажмите кнопку
+                <input type="submit" value="Создать">
+            </label>
+        </a>
+
         @if(page.getCourses().isEmpty())
         <p>Пока не добавлено ни одного курса</p>
         @else
