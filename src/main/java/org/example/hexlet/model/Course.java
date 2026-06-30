@@ -6,11 +6,9 @@ import lombok.ToString;
 
 @Getter
 @Setter
-@ToString
+@ToString(exclude = "id")
 public final class Course {
     private Long id;
-
-    @ToString.Include
     private String name;
     private String description;
 
