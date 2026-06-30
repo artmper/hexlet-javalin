@@ -1,3 +1,4 @@
+@import org.example.hexlet.NamedRoutes
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,8 +11,8 @@
     <main>
         <h1 class="text-body-emphasis">Привет, Хекслет!</h1>
         <ul>
-            <li><a href="/courses">Courses</a></li>
-            <li><a href="/users">Users</a></li>
+            <li><a href="${NamedRoutes.coursesPath()}">Courses</a></li>
+            <li><a href="${NamedRoutes.usersPath()}">Users</a></li>
         </ul>
     </main>
 </div>

@@ -35,7 +35,7 @@ public class HelloWorld {
 
         app.get("/", ctx -> ctx.render("index.jte"));
 
-        app.get("/users", ctx -> {
+        app.get(NamedRoutes.usersPath(), ctx -> {
             List<User> users = UserRepository.getEntities();
             var header = "All Users";
             var term = ctx.queryParam("term");
@@ -50,7 +50,7 @@ public class HelloWorld {
             ctx.render("users/index.jte", model("page", page));
         });
 
-        app.post("/users", ctx -> {
+        app.post(NamedRoutes.usersPath(), ctx -> {
             var name = ctx.formParam("name").trim();
             var email = ctx.formParam("email").trim().toLowerCase();
 
@@ -61,35 +61,24 @@ public class HelloWorld {
                         .get();
                 var user = new User(name, email, password);
                 UserRepository.save(user);
-                ctx.redirect("/users");
+                ctx.redirect(NamedRoutes.usersPath());
             } catch (ValidationException e) {
                 var page = new BuildUserPage(name, email, e.getErrors());
                 ctx.render("users/build.jte", model("page", page));
             }
         });
 
-        app.get("/hello", ctx -> {
-            String name = ctx.queryParamAsClass("name", String.class).getOrDefault("World");
-            ctx.result("Hello, " + name + "!");
-        });
-
-        app.get("/users/{id}/post/{postId}", ctx -> {
-            var userId = ctx.pathParam("id");
-            var postId = ctx.pathParam("postId");
-            ctx.result("User ID: " + userId + ", Post ID: " + postId);
-        });
-
-        app.get("/users/build", ctx -> {
+        app.get(NamedRoutes.buildUserPath(), ctx -> {
             var page = new BuildUserPage();
             ctx.render("users/build.jte", model("page", page));
         });
 
-        app.get("/courses/build", ctx -> {
+        app.get(NamedRoutes.buildCoursePath(), ctx -> {
             var page = new BuildCoursePage();
             ctx.render("courses/build.jte", model("page", page));
         });
 
-        app.get("/users/{id}", ctx -> {
+        app.get(NamedRoutes.userPath("{id}"), ctx -> {
             var id = ctx.pathParamAsClass("id", Long.class).get();
             var user = UserRepository.getEntities().stream()
                     .filter(u -> u.getId().equals(id))
@@ -99,7 +88,7 @@ public class HelloWorld {
             ctx.render("users/show.jte", model("page", page));
         });
 
-        app.get("/courses/{id}", ctx -> {
+        app.get(NamedRoutes.coursePath("{id}"), ctx -> {
             var id = ctx.pathParamAsClass("id", Long.class).get();
             var course = CourseRepository.getEntities().stream()
                     .filter(c -> c.getId().equals(id))
@@ -109,7 +98,7 @@ public class HelloWorld {
             ctx.render("courses/show.jte", model("page", page));
         });
 
-        app.get("/courses", ctx -> {
+        app.get(NamedRoutes.coursesPath(), ctx -> {
             List<Course> courses = CourseRepository.getEntities();
             var header = "Programming languages courses";
             var term = ctx.queryParam("term");
@@ -125,7 +114,7 @@ public class HelloWorld {
             ctx.render("courses/index.jte", model("page", page));
         });
 
-        app.post("/courses", ctx -> {
+        app.post(NamedRoutes.coursesPath(), ctx -> {
             try {
                 var name = ctx.formParamAsClass("name", String.class)
                         .check(v -> v.length() > 2, "Название курса должно содержать больше 2 символов!")
@@ -136,8 +125,9 @@ public class HelloWorld {
                         .get();
                 var course = new Course(name, description);
                 CourseRepository.save(course);
-                ctx.redirect("/courses");
-            } catch (ValidationException e) {
+                ctx.redirect(NamedRoutes.coursesPath());
+            }
+            catch (ValidationException e) {
                 var page = new BuildCoursePage(e.getErrors());
                 ctx.render("courses/build.jte", model("page", page));
             }

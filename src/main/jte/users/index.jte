@@ -1,3 +1,4 @@
+@import org.example.hexlet.NamedRoutes
 @import org.example.hexlet.dto.users.UsersPage
 
 @param UsersPage page
@@ -6,11 +7,11 @@
 title = page.getHeader(),
 description = null,
 content = @`
-    <form action="/users" method="get">
+    <form action="${NamedRoutes.usersPath()}" method="get">
         <input type="search" name="term" value="${page.getTerm()}" />
         <input type="submit" value="Search" />
     </form>
-    <a href="/users/build">
+    <a href="${NamedRoutes.buildUserPath()}">
         <label>
             Для создания нового пользователя,
             нажмите кнопку
@@ -23,7 +24,7 @@ content = @`
     @else
         @for(var user : page.getUsers())
             <div>
-                <h2><a href="/users/${user.getId()}">${user.getName()}</a></h2>
+                <h2><a href="${NamedRoutes.userPath(user.getId())}">${user.getName()}</a></h2>
                 <p>${user.getEmail()}</p>
             </div>
         @endfor
