@@ -1,6 +1,9 @@
 package org.example.hexlet;
 
 public class NamedRoutes {
+    public static String rootPath() {
+        return "/";
+    }
     public static String usersPath() {
         return "/users";
     }
