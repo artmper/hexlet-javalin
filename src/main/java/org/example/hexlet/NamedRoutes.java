@@ -35,4 +35,12 @@ public class NamedRoutes {
     public static String userPath(String id) {
         return "/users/" + id;
     }
+
+    public static String sessionsPath() {
+        return "/sessions";
+    }
+
+    public static String buildSessionPath() {
+        return "/session/build";
+    }
 }

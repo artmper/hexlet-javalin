@@ -11,7 +11,14 @@
     </head>
     <body>
         <main>
-            <h1 class="text-body-emphasis">Привет, Хекслет!</h1>
+            <h1>Привет, Хекслет!</h1>
+            @if(page.getCurrentUser() != null)
+                <p>Добро пожаловать, ${page.getCurrentUser()}.</p>
+                <p>Чтобы разлогиниться, удалите куку JSESSIONID из браузера</p>
+            @endif
+            <div style="display: flex; justify-content: center;">
+                <a href="${NamedRoutes.buildSessionPath()}">Логин</a>
+            </div>
             @if (!page.isVisited())
                 <h2>Тестирую куки...</h2>
             @endif

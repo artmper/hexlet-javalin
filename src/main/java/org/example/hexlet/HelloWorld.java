@@ -2,6 +2,7 @@ package org.example.hexlet;
 
 import org.example.hexlet.controller.CoursesController;
 import org.example.hexlet.controller.RootController;
+import org.example.hexlet.controller.SessionsController;
 import org.example.hexlet.controller.UsersController;
 
 import io.javalin.Javalin;
@@ -35,6 +36,10 @@ public class HelloWorld {
         app.get(NamedRoutes.buildCoursePath(), CoursesController::build);
         app.get(NamedRoutes.coursePath("{id}"), CoursesController::show);
         app.post(NamedRoutes.coursesPath(), CoursesController::create);
+
+        app.get(NamedRoutes.buildSessionPath(), SessionsController::build);
+        app.post(NamedRoutes.sessionsPath(), SessionsController::create);
+        app.delete(NamedRoutes.sessionsPath(), SessionsController::destroy);
 
         app.start(7070);
     }
