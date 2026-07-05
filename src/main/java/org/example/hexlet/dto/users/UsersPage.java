@@ -1,5 +1,6 @@
 package org.example.hexlet.dto.users;
 
+import org.example.hexlet.dto.BasePage;
 import org.example.hexlet.model.User;
 
 import lombok.AllArgsConstructor;
@@ -9,7 +10,7 @@ import java.util.List;
 
 @AllArgsConstructor
 @Getter
-public class UsersPage {
+public class UsersPage extends BasePage {
     private List<User> users;
     private String header;
     private String term;

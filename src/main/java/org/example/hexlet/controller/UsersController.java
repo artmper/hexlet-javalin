@@ -21,6 +21,7 @@ public class UsersController {
         List<User> users = UserRepository.getEntities();
         var header = "All Users";
         var term = ctx.queryParam("term");
+        String flash = ctx.consumeSessionAttribute("flash");
 
         if (term != null) {
             users = users.stream()
@@ -29,6 +30,7 @@ public class UsersController {
         }
 
         var page = new UsersPage(users, header, term);
+        page.setFlash(flash);
         ctx.render("users/index.jte", model("page", page));
     }
 
@@ -56,9 +58,13 @@ public class UsersController {
                     .get();
             var user = new User(name, email, password);
             UserRepository.save(user);
+            ctx.sessionAttribute("flash", "User created successfully!");
             ctx.redirect(NamedRoutes.usersPath());
         } catch (ValidationException e) {
+            ctx.sessionAttribute("flash", "Can not create user with these data!");
             var page = new BuildUserPage(name, email, e.getErrors());
+            String flash = ctx.consumeSessionAttribute("flash");
+            page.setFlash(flash);
             ctx.render("users/build.jte", model("page", page));
         }
     }
