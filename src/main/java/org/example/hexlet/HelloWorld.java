@@ -1,5 +1,7 @@
 package org.example.hexlet;
 
+import com.zaxxer.hikari.HikariConfig;
+import com.zaxxer.hikari.HikariDataSource;
 import org.example.hexlet.controller.CoursesController;
 import org.example.hexlet.controller.RootController;
 import org.example.hexlet.controller.SessionsController;
@@ -7,15 +9,17 @@ import org.example.hexlet.controller.UsersController;
 
 import io.javalin.Javalin;
 import io.javalin.rendering.template.JavalinJte;
+import org.example.hexlet.repository.BaseRepository;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.time.LocalDateTime;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class HelloWorld {
-    public static void main(String[] args) {
-        Javalin app = Javalin.create(config -> {
-            config.bundledPlugins.enableDevLogging();
-            config.fileRenderer(new JavalinJte());
-        });
+    public static void main(String[] args) throws Exception {
+        Javalin app = getApp();
 
         app.before(ctx -> {
             ctx.contentType("text/html; charset=UTF-8");
@@ -42,5 +46,29 @@ public class HelloWorld {
         app.delete(NamedRoutes.sessionsPath(), SessionsController::destroy);
 
         app.start(7070);
+    }
+
+    public static Javalin getApp() throws Exception {
+        var hikariConfig = new HikariConfig();
+        hikariConfig.setJdbcUrl("jdbc:h2:mem:hexlet_javalin;DB_CLOSE_DELAY=-1");
+
+        var dataSource = new HikariDataSource(hikariConfig);
+        String sql;
+        try (var url = HelloWorld.class.getClassLoader().getResourceAsStream("schema.sql")) {
+            sql = new BufferedReader(new InputStreamReader(Objects.requireNonNull(url)))
+                    .lines().collect(Collectors.joining("\n"));
+        }
+
+        try (var conn = dataSource.getConnection();
+                var stmt = conn.createStatement()) {
+            stmt.execute(sql);
+        }
+
+        BaseRepository.dataSource = dataSource;
+
+        return Javalin.create(config -> {
+            config.bundledPlugins.enableDevLogging();
+            config.fileRenderer(new JavalinJte());
+        });
     }
 }

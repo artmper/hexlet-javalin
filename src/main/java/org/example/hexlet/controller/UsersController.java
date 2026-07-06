@@ -12,12 +12,13 @@ import org.example.hexlet.dto.users.UsersPage;
 import org.example.hexlet.model.User;
 import org.example.hexlet.repository.UserRepository;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import static io.javalin.rendering.template.TemplateUtil.model;
 
 public class UsersController {
-    public static void index(Context ctx) {
+    public static void index(Context ctx) throws SQLException {
         List<User> users = UserRepository.getEntities();
         var header = "All Users";
         var term = ctx.queryParam("term");
@@ -34,7 +35,7 @@ public class UsersController {
         ctx.render("users/index.jte", model("page", page));
     }
 
-    public static void show(Context ctx) {
+    public static void show(Context ctx) throws SQLException {
         var id = ctx.pathParamAsClass("id", Long.class).get();
         var user = UserRepository.find(id)
                 .orElseThrow(() -> new NotFoundResponse("Entity with id = " + id + " not found"));
@@ -47,7 +48,7 @@ public class UsersController {
         ctx.render("users/build.jte", model("page", page));
     }
 
-    public static void create(Context ctx) {
+    public static void create(Context ctx) throws SQLException {
         var name = ctx.formParam("name").trim();
         var email = ctx.formParam("email").trim().toLowerCase();
 
@@ -68,35 +69,4 @@ public class UsersController {
             ctx.render("users/build.jte", model("page", page));
         }
     }
-//
-//    public static void edit(Context ctx) {
-//        var id = ctx.pathParamAsClass("id", Long.class).get();
-//        var user = UserRepository.find(id)
-//                .orElseThrow(() -> new NotFoundResponse("Entity with id = " + id + " not found"));
-//        var page = new UserPage(user);
-//        ctx.render("users/edit.jte", model("page", page));
-//    }
-//
-//
-//    public static void update(Context ctx) {
-//        var id = ctx.pathParamAsClass("id", Long.class).get();
-//
-//        var name = ctx.formParam("name");
-//        var email = ctx.formParam("email");
-//        var password = ctx.formParam("password");
-//
-//        var user = UserRepository.find(id)
-//                .orElseThrow(() -> new NotFoundResponse("Entity with id = " + id + " not found"));
-//        user.setName(name);
-//        user.setEmail(email);
-//        user.setPassword(password);
-//        UserRepository.save(user);
-//        ctx.redirect(NamedRoutes.usersPath());
-//    }
-//
-//    public static void destroy(Context ctx) {
-//        var id = ctx.pathParamAsClass("id", Long.class).get();
-//        UserRepository.delete(id);
-//        ctx.redirect(NamedRoutes.usersPath());
-//    }
 }
