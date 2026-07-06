@@ -14,7 +14,9 @@
             <h1>Привет, Хекслет!</h1>
             @if(page.getCurrentUser() != null)
                 <p>Добро пожаловать, ${page.getCurrentUser()}.</p>
-                <p>Чтобы разлогиниться, удалите куку JSESSIONID из браузера</p>
+                <form action="/session/destroy" method="post">
+                    <input type="submit" value="Выход">
+                </form>
             @endif
             <div style="display: flex; justify-content: center;">
                 <a href="${NamedRoutes.buildSessionPath()}">Логин</a>

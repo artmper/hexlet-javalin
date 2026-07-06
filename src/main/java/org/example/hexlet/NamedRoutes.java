@@ -43,4 +43,8 @@ public class NamedRoutes {
     public static String buildSessionPath() {
         return "/session/build";
     }
+
+    public static String destroySessionPath() {
+        return "/session/destroy";
+    }
 }

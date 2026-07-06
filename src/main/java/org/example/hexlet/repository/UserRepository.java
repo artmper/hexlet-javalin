@@ -66,4 +66,23 @@ public class UserRepository extends BaseRepository {
             return result;
         }
     }
+
+    public static Optional<User> findByName(String name) throws SQLException {
+        var sql = "SELECT * FROM users WHERE name = ?";
+        try (var conn = dataSource.getConnection();
+             var stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, name);
+            var resultSet = stmt.executeQuery();
+
+            if (resultSet.next()) {
+                var id = resultSet.getLong("id");
+                var email = resultSet.getString("email");
+                var password = resultSet.getString("password");
+                var user = new User(name, email, password);
+                user.setId(id);
+                return Optional.of(user);
+            }
+            return Optional.empty();
+        }
+    }
 }
