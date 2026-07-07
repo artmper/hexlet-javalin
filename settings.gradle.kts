@@ -6,3 +6,4 @@
  */
 
 rootProject.name = "HexletJavalin"
+include("app")

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="15a50373-61f9-47ab-a8b2-a334cd0015c6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/app/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/app/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/app/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/app/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/app/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hexlet/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/hexlet/Data.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hexlet/HelloWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/hexlet/HelloWorld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hexlet/NamedRoutes.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/hexlet/NamedRoutes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hexlet/controller/CoursesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/hexlet/controller/CoursesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hexlet/controller/RootController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/hexlet/controller/RootController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hexlet/controller/SessionsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/hexlet/controller/SessionsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hexlet/controller/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/hexlet/controller/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hexlet/dto/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/hexlet/dto/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hexlet/dto/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/hexlet/dto/MainPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hexlet/dto/courses/BuildCoursePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/hexlet/dto/courses/BuildCoursePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hexlet/dto/courses/CoursePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/hexlet/dto/courses/CoursePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hexlet/dto/courses/CoursesPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/hexlet/dto/courses/CoursesPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hexlet/dto/users/BuildUserPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/hexlet/dto/users/BuildUserPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hexlet/dto/users/UserPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/hexlet/dto/users/UserPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hexlet/dto/users/UsersPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/hexlet/dto/users/UsersPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hexlet/model/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/hexlet/model/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hexlet/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/hexlet/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hexlet/repository/BaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/hexlet/repository/BaseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hexlet/repository/CourseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/hexlet/repository/CourseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hexlet/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/hexlet/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/jte/.jteroot" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/jte/.jteroot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/jte/courses/build.jte" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/jte/courses/build.jte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/jte/courses/index.jte" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/jte/courses/index.jte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/jte/courses/show.jte" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/jte/courses/show.jte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/jte/index.jte" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/jte/index.jte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/jte/layout/page.jte" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/jte/layout/page.jte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/jte/sessions/build.jte" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/jte/sessions/build.jte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/jte/users/build.jte" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/jte/users/build.jte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/jte/users/index.jte" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/jte/users/index.jte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/jte/users/show.jte" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/jte/users/show.jte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/schema.sql" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;artmper&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/artmper/hexlet-javalin.git&quot;,
+    &quot;accountId&quot;: &quot;21c2bd20-e80c-47a7-bc4c-438e43eaeacb&quot;
+  }
+}</component>
+  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="$PROJECT_DIR$/../.gradle/wrapper/dists/gradle-8.7-bin/bhs2wmbdwecv87pi65oeuq5iu/gradle-8.7" javaHome="$PROJECT_DIR$/../.jdks/graalvm-jdk-21.0.7" gradleVersion="8.7" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="3E0JaxDUiAV9cBz85Zueof2cCVJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Gradle.Download Sources.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/artmp24/HexletJavalin",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "configurable.group.appearance"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "TEXT"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-26cb7f24e5b0-intellij.indexing.shared.core-IU-253.29346.138" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="15a50373-61f9-47ab-a8b2-a334cd0015c6" name="Changes" comment="" />
+      <created>1779309620426</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1779309620426</updated>
+    </task>
+    <servers />
+  </component>
+</project>
