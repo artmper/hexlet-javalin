@@ -50,7 +50,7 @@ public class HelloWorld {
 
     public static Javalin getApp() throws Exception {
         var hikariConfig = new HikariConfig();
-        hikariConfig.setJdbcUrl("jdbc:h2:mem:hexlet_javalin;DB_CLOSE_DELAY=-1");
+        hikariConfig.setJdbcUrl(getDatabaseUrl());
 
         var dataSource = new HikariDataSource(hikariConfig);
         String sql;
@@ -70,5 +70,10 @@ public class HelloWorld {
             config.bundledPlugins.enableDevLogging();
             config.fileRenderer(new JavalinJte());
         });
+    }
+
+    private static String getDatabaseUrl() {
+        return System.getenv().getOrDefault("DATABASE_URL",
+                "jdbc:h2:mem:hexlet_javalin;DB_CLOSE_DELAY=-1");
     }
 }
