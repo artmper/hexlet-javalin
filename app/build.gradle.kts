@@ -5,6 +5,7 @@ plugins {
     id("java")
     application
     id("com.github.johnrengelman.shadow") version "8.1.1"
+    id("gg.jte.gradle") version "3.1.9"
 }
 
 application {
@@ -35,6 +36,11 @@ dependencies {
 
     compileOnly("org.projectlombok:lombok:1.18.46")
     annotationProcessor("org.projectlombok:lombok:1.18.46")
+}
+
+jte {
+    contentType.set(gg.jte.ContentType.Html)
+    generate()
 }
 
 tasks.test {

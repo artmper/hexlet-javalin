@@ -8,6 +8,8 @@ import org.example.hexlet.controller.SessionsController;
 import org.example.hexlet.controller.UsersController;
 
 import io.javalin.Javalin;
+import gg.jte.ContentType;
+import gg.jte.TemplateEngine;
 import io.javalin.rendering.template.JavalinJte;
 import org.example.hexlet.repository.BaseRepository;
 
@@ -69,7 +71,7 @@ public class HelloWorld {
 
         return Javalin.create(config -> {
             config.bundledPlugins.enableDevLogging();
-            config.fileRenderer(new JavalinJte());
+            config.fileRenderer(new JavalinJte(TemplateEngine.createPrecompiled(ContentType.Html)));
         });
     }
 
