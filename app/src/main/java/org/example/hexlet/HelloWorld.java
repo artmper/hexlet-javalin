@@ -20,6 +20,7 @@ import java.util.stream.Collectors;
 public class HelloWorld {
     public static void main(String[] args) throws Exception {
         Javalin app = getApp();
+        int port = Integer.parseInt(System.getenv().getOrDefault("PORT", "7070"));
 
         app.before(ctx -> {
             ctx.contentType("text/html; charset=UTF-8");
@@ -45,7 +46,7 @@ public class HelloWorld {
         app.post(NamedRoutes.sessionsPath(), SessionsController::create);
         app.post(NamedRoutes.destroySessionPath(), SessionsController::destroy);
 
-        app.start(7070);
+        app.start(port);
     }
 
     public static Javalin getApp() throws Exception {

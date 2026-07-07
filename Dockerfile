@@ -4,6 +4,6 @@ WORKDIR /app
 
 COPY . .
 
-RUN ["./gradlew", "clean", "build"]
+RUN ./gradlew shadowJar --no-daemon
 
-CMD ["./gradlew", "run", "-x", "test"]
+CMD ["java", "-jar", "app/build/libs/app-1.0-SNAPSHOT-all.jar"]
