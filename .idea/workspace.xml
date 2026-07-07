@@ -5,45 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15a50373-61f9-47ab-a8b2-a334cd0015c6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/app/.gitattributes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/app/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/app/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/app/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/app/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hexlet/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/hexlet/Data.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hexlet/HelloWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/hexlet/HelloWorld.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hexlet/NamedRoutes.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/hexlet/NamedRoutes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hexlet/controller/CoursesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/hexlet/controller/CoursesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hexlet/controller/RootController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/hexlet/controller/RootController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hexlet/controller/SessionsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/hexlet/controller/SessionsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hexlet/controller/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/hexlet/controller/UsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hexlet/dto/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/hexlet/dto/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hexlet/dto/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/hexlet/dto/MainPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hexlet/dto/courses/BuildCoursePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/hexlet/dto/courses/BuildCoursePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hexlet/dto/courses/CoursePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/hexlet/dto/courses/CoursePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hexlet/dto/courses/CoursesPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/hexlet/dto/courses/CoursesPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hexlet/dto/users/BuildUserPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/hexlet/dto/users/BuildUserPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hexlet/dto/users/UserPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/hexlet/dto/users/UserPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hexlet/dto/users/UsersPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/hexlet/dto/users/UsersPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hexlet/model/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/hexlet/model/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hexlet/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/hexlet/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hexlet/repository/BaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/hexlet/repository/BaseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hexlet/repository/CourseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/hexlet/repository/CourseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hexlet/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/hexlet/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/jte/.jteroot" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/jte/.jteroot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/jte/courses/build.jte" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/jte/courses/build.jte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/jte/courses/index.jte" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/jte/courses/index.jte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/jte/courses/show.jte" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/jte/courses/show.jte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/jte/index.jte" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/jte/index.jte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/jte/layout/page.jte" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/jte/layout/page.jte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/jte/sessions/build.jte" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/jte/sessions/build.jte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/jte/users/build.jte" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/jte/users/build.jte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/jte/users/index.jte" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/jte/users/index.jte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/jte/users/show.jte" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/jte/users/show.jte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
