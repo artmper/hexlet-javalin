@@ -48,3 +48,7 @@ tasks.test {
         showStandardStreams = true
     }
 }
+
+tasks.shadowJar {
+    mergeServiceFiles()
+}
